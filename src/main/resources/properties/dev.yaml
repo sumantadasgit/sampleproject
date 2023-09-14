@@ -1,0 +1,20 @@
+https:
+  listener:
+    host: "0.0.0.0"
+    keystore: 
+      file: "ssl/server-keystore-dev.p12"
+      alias: "server"
+      password: "${secure::keystore.password}"
+    truststore:
+      file: "ssl/client-truststore.p12"
+      alias: "localhost-client"
+      password: "${secure::truststore.password}"
+    timeout:
+      connection-idle: "600000"
+  private:
+   port: "8092"
+  port: "8082"
+  request:
+    timeout:
+      connection-idle: "500000"
+      response: "40000"
