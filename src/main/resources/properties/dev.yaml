@@ -10,7 +10,7 @@ https:
       alias: "localhost-client"
       password: "${secure::truststore.password}"
     timeout:
-      connection-idle: "600000"
+      connection-idle: "500000"
   private:
    port: "8092"
   port: "8082"
